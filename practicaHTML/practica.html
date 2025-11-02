@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica de Selectores Combinadores</title>
+  <style>
+    /* DESCENDIENTE */
+    .contenedor p {
+      color: red;
+    }
+
+    /* HIJO DIRECTO */
+    .contenedor > h3 {
+      background-color: lightblue;
+    }
+
+    /* HERMANO ADYACENTE */
+    h2 + p {
+      font-weight: bold;
+      color: green;
+    }
+
+    /* HERMANOS GENERALES */
+    h1 ~ p {
+      font-style: italic;
+      background-color: #fce4ec;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Esto es un H1</h1>
+
+  <p>Párrafo 1 (hermano general del h1)</p>
+  <div>
+    <p>Párrafo 2 (NO hermano del h1, está dentro de un div)</p>
+  </div>
+  
+  <h2>Esto es un H2</h2>
+  <p>Párrafo 3 (hermano adyacente del h2)</p>
+  <p>Párrafo 4 (NO adyacente del h2, pero sí hermano general)</p>
+
+  <div class="contenedor">
+    <h3>Hijo directo del contenedor</h3>
+    <section>
+      <p>Descendiente (nieto) del contenedor</p>
+    </section>
+    <p>Hijo directo del contenedor</p>
+  </div>
+
+</body>
+</html>
